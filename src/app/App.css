@@ -32,10 +32,6 @@
   background-color: #006cab;
 }
 
-body{
-  padding: 20px;
-}
-
 .my-bordered-list {
     /* remove the side padding. we'll be placing it around the item instead. */
     padding-right: 0;
