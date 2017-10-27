@@ -9,8 +9,7 @@
 
 .App-header {
   background-color: #006cab;
-  padding: 20px 0px;
-  height: 90px;
+  padding-top: 20px;
   color: white;
   align-items:flex-end;
 }
@@ -30,6 +29,11 @@
 
 #my_toolbar{
   background-color: #006cab;
+}
+
+#my_search_bar{
+  width: 400px;
+  margin: 20px;
 }
 
 .my-bordered-list {

@@ -21,16 +21,18 @@ class SearchBar extends Component{
 
 
       <form onSubmit={this.onFormSubmit} className="input-field">
-        <input
-          id="search"
-          type="search"
-          placeholder="Search a unit"
-          className="form-control"
-          value={this.state.term}
-          onChange={this.onInputChange} />
-        <span className="input-group-btn">
-          <button type="submit" className="btn btn-secondary">Submit</button>
-        </span>
+
+        <div class="mdc-textfield" id="my_search_bar">
+          <input type="text" id="my-textfield" class="mdc-textfield__input" />
+          <label class="mdc-textfield__label" for="my-textfield">Search a Unit</label>
+          <div class="mdc-textfield__bottom-line"></div>
+        </div>
+
+
+        <button type="submit" className="mdc-button mdc-button--raised mdc-button--compact">
+          <i class="material-icons mdc-button__icon">search</i>
+          Search
+        </button>
       </form>
     )
   }
