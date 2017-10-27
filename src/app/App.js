@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import Toolbar from '../components/tool_bar'
 import SearchBar from '../containers/search_bar'
 class App extends Component {
   render () {
@@ -8,9 +9,13 @@ class App extends Component {
       <div className='App'>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
-          <h1 className='App-title'>Monash Handbook Unit Viewer</h1>
+          <Toolbar />
         </header>
         <SearchBar />
       </div>

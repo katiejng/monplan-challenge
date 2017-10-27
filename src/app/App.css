@@ -4,14 +4,15 @@
 }
 
 .App-logo {
-  height: 80px;
+  height: 40px;
 }
 
 .App-header {
   background-color: #006cab;
-  height: 150px;
-  padding: 20px;
+  padding: 20px 0px;
+  height: 90px;
   color: white;
+  align-items:flex-end;
 }
 
 .App-title {
@@ -27,6 +28,6 @@
   to { transform: rotate(360deg); }
 }
 
-.input-field {
-  margin: 20px 0px;
+#my_toolbar{
+  background-color: #006cab;
 }
