@@ -3,6 +3,7 @@ import logo from './logo.svg'
 import './App.css'
 import Toolbar from '../components/tool_bar'
 import SearchBar from '../containers/search_bar'
+import UnitList from '../components/unit_list'
 class App extends Component {
   render () {
     return (
@@ -18,6 +19,7 @@ class App extends Component {
           <Toolbar />
         </header>
         <SearchBar />
+        <UnitList />
       </div>
     )
   }
