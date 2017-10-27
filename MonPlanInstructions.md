@@ -1,4 +1,5 @@
-# monPlan Handbook Unit Viewer
+# monPlan Challenge
+This Part of the monPlan 2018 Summer Hiring Interview Process
 
 # Dependencies (Installation)
 1. Node.js (https://nodejs.org) (we suggest you use NVM (https://github.com/creationix/nvm) to use our preferred Node.js version)
@@ -14,7 +15,7 @@
 You are **expected** to handle errors
 
 # Your Goal
-Your Goal is to design a 'Unit Handbook Viewer' where students are able to search a unit code and then select a unit that they are interested in.
+Your Goal is to design a 'Unit Handbook Viewer' where students are able to search a unit code and then select a unit that they are interested in. 
 
 After selecting an unit that they are interested in, they can view more information about that unit.
 
@@ -31,20 +32,20 @@ You also have to make it device responsive using CSS.
 You may want to use Redux as it will make it easier to use. HINT: this may actually improve your application ;)
 # Good Tutorials to Follow
 You can follow some of the tutorials below
-- https://reactjs.org/
+- https://reactjs.org/ 
 - http://redux.js.org/docs/introduction/ (NOTE: We believe that redux is slightly more important)
 
 Some good tutorials on ReactJS and Redux:
-- https://egghead.io/courses/react-fundamentals
-- https://egghead.io/courses/getting-started-with-redux
+- https://egghead.io/courses/react-fundamentals 
+- https://egghead.io/courses/getting-started-with-redux 
 
 # API Calls
 The following are some API calls that you may need. **Some parts of the sample response has been hidden for brevity**
 
 Base route: https://monplan-api-dev.appspot.com
 
-# GET all units
-To get a list of all units, GET `/basic/units`
+# GET all units 
+To get a list of all units, GET `/basic/units` 
 
 ```
 [
