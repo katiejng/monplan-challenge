@@ -4,6 +4,8 @@ import './App.css'
 import Toolbar from '../components/tool_bar'
 import SearchBar from '../containers/search_bar'
 import UnitList from '../components/unit_list'
+import UnitDetail from '../components/unit_detail'
+
 class App extends Component {
   render () {
     return (
@@ -21,6 +23,7 @@ class App extends Component {
         <body>
           <SearchBar />
           <UnitList />
+          <UnitDetail />
         </body>
       </div>
     )
