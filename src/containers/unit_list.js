@@ -52,6 +52,7 @@ class UnitList extends Component {
   render(){
     return (
       <ul className="mdc-list my-bordered-list"id="unit_list">
+        {console.log(this.props.units)}
         {this.renderUnits(this.props.units.searched_units)}
       </ul>
 

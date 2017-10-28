@@ -25,7 +25,7 @@ class SearchBar extends Component{
   onFormSubmit(event){
     // prevent page from refreshing
     event.preventDefault();
-
+    console.log(this.state.term)
     //search for the unit in units
     if (this.state.term.length>0){
       //TODO: Show an error

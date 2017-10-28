@@ -4,7 +4,7 @@ import './App.css'
 import Toolbar from '../components/tool_bar'
 import SearchBar from '../containers/search_bar'
 import UnitList from '../containers/unit_list'
-import UnitDetail from '../components/unit_detail'
+import UnitDetail from '../containers/unit_detail'
 import Loading from '../containers/loading'
 class App extends Component {
   render () {
