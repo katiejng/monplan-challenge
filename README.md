@@ -8,6 +8,8 @@ Things I used:
 3. Material Components for Web (https://material.io/components/web/)
 4. redux-promise
 5. axios
+6. react-redux
+7. redux
 
 
 # Instructions before starting the challenge
