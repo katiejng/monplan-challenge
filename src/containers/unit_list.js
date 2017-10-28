@@ -18,13 +18,15 @@ class UnitList extends Component {
 
   renderUnits(unitlist){
     var maxLen=5
-    if (unitlist.data){
-      maxLen = (unitlist.data.length < maxLen) ? unitlist.data.length : maxLen;
-      return(
-        <div>
-          {unitlist.data.splice(0,maxLen).map(this.renderUnit)}
-        </div>
-      )
+    if (unitlist.units){
+      if (unitlist.units.data){
+        maxLen = (unitlist.units.data.length < maxLen) ? unitlist.units.data.length : maxLen;
+        return(
+          <div>
+            {unitlist.units.data.splice(0,maxLen).map(this.renderUnit)}
+          </div>
+        )
+      }
     }
     return
   }
