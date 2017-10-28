@@ -66,9 +66,7 @@ class  UnitDetail extends Component{
           <section className="mdc-card__supporting-text">
             Credit Points: {currentUnit.creditPoints}
           </section>
-          <section className="mdc-card__actions">
-            <button className="mdc-button mdc-button--compact mdc-card__action">See more...</button>
-            </section>
+          
           </div>
       </div>
     );
