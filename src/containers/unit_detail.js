@@ -4,6 +4,24 @@ import { connect } from 'react-redux'
 //TODO: Location and Times
 class  UnitDetail extends Component{
 
+  renderLocationAndTime(lat){
+    var time = <div />
+    if (lat.time){
+      var time = lat.time.map((time)=>
+        <div key={time}>
+          {time}
+        </div>
+      )}
+
+    return(
+            <div key={lat.location}>
+              {lat.location}
+              {time}
+            </div>
+          )
+        }
+
+
   render(){
 
     if (!this.props.unit){
@@ -24,18 +42,8 @@ class  UnitDetail extends Component{
           {this.props.unit.faculty}
         </section>
         <section className="mdc-card__supporting-text">
-        Offered at: 
-          {this.props.unit.locationAndTime.map(
-            (lat)=>
-                <div key={lat.location}>
-                  {lat.location}
-                  {lat.time.map((time)=>
-                    <div key={time}>
-                      {time}
-                    </div>
-                  )}
-                </div>
-            )
+        Offered at:
+          {this.props.unit.locationAndTime.map(this.renderLocationAndTime)
           }
         </section>
         <section className="mdc-card__supporting-text">
