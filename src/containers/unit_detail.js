@@ -23,7 +23,6 @@ class  UnitDetail extends Component{
 
 
   render(){
-
     if (!this.props.unit){
         return (<div className="mdc-card" id="unit_detail">
           <section className="mdc-card__primary">
@@ -32,26 +31,45 @@ class  UnitDetail extends Component{
         </div>
       )
     }
+      console.log(this.props.unit.data)
+      const currentUnit = this.props.unit.data
     return (
       <div className="mdc-card" id="unit_detail">
         <section className="mdc-card__primary">
-          <h1 className="mdc-card__title mdc-card__title--large">{this.props.unit.unitCode}</h1>
-          <h2 className="mdc-card__subtitle">{this.props.unit.unitName}</h2>
+          <h1 className="mdc-card__title mdc-card__title--large">{currentUnit.unitCode}</h1>
+          <h2 className="mdc-card__subtitle">{currentUnit.unitName}</h2>
+
         </section>
-        <section className="mdc-card__supporting-text">
-          {this.props.unit.faculty}
-        </section>
-        <section className="mdc-card__supporting-text">
-        Offered at:
-          {this.props.unit.locationAndTime.map(this.renderLocationAndTime)
-          }
-        </section>
-        <section className="mdc-card__supporting-text">
-          Credit Points: {this.props.unit.creditPoints}
-        </section>
-        <section className="mdc-card__actions">
-          <button className="mdc-button mdc-button--compact mdc-card__action">See more...</button>
+        <div id="unit_detail_body">
+
+          <section className="mdc-card__supporting-text">
+            <h3 className="mdc-card__subtitle">{currentUnit.description}</h3>
           </section>
+
+          <section className="mdc-card__supporting-text">
+            Faculty: <br />
+            {currentUnit.faculty}
+          </section>
+
+          <section className="mdc-card__supporting-text">
+            Prerequisites: <br />
+            {currentUnit.preqs} <br />
+            Prohibitions: <br />
+            {currentUnit.proh}
+          </section>
+
+          <section className="mdc-card__supporting-text">
+          Offered at: <br />
+            {currentUnit.locationAndTime.map(this.renderLocationAndTime)
+            }
+          </section>
+          <section className="mdc-card__supporting-text">
+            Credit Points: {currentUnit.creditPoints}
+          </section>
+          <section className="mdc-card__actions">
+            <button className="mdc-button mdc-button--compact mdc-card__action">See more...</button>
+            </section>
+          </div>
       </div>
     );
   };
