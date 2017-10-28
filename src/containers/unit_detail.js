@@ -21,7 +21,22 @@ class  UnitDetail extends Component{
           <h2 className="mdc-card__subtitle">{this.props.unit.unitName}</h2>
         </section>
         <section className="mdc-card__supporting-text">
-          Faculty: {this.props.unit.faculty}
+          {this.props.unit.faculty}
+        </section>
+        <section className="mdc-card__supporting-text">
+        Offered at: 
+          {this.props.unit.locationAndTime.map(
+            (lat)=>
+                <div key={lat.location}>
+                  {lat.location}
+                  {lat.time.map((time)=>
+                    <div key={time}>
+                      {time}
+                    </div>
+                  )}
+                </div>
+            )
+          }
         </section>
         <section className="mdc-card__supporting-text">
           Credit Points: {this.props.unit.creditPoints}
