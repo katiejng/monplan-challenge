@@ -11,7 +11,7 @@ class UnitList extends Component {
 
   renderUnit(unitData){
     return(
-      <UnitListItem />
+      <UnitListItem unitData={unitData} />
     )
   }
 

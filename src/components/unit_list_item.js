@@ -1,11 +1,13 @@
 import React from 'react';
 
-const UnitListItem = () => {
+const UnitListItem = (props) => {
   return (
-    <li className="mdc-list-item">
+    <li className="mdc-list-item" id="unit_list_item">
       <span className="mdc-list-item__text">
-      Two-line item
-      <span className="mdc-list-item__text__secondary">Secondary text</span>
+        {props.unitData.unitCode}
+        <span className="mdc-list-item__text__secondary">
+          {props.unitData.unitName}
+        </span>
       </span>
     </li>
   );

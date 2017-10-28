@@ -51,7 +51,15 @@
   min-width: 20em;
   max-width: 40em;
   display: inline-block;
-  vertical-align: top
+  vertical-align: top;
+}
+
+#unit_list_item{
+  text-align: left;
+  width: inherit;
+  overflow: scroll;
+  padding: 10px 15px;
+
 }
 
 #main_content{
