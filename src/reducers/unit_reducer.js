@@ -6,7 +6,7 @@ export default function(state={units: [], searched_units: [-1], isLoading: true}
       return {units: action.payload, searched_units: state.searched_units, isLoading: false};
     case SEARCH_UNITS:
       if (state.units && state.units.data){
-        const term = action.payload
+        const term = action.payload.toLowerCase()
          var results = []
          var max_len = 10
 
