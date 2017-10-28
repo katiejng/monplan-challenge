@@ -23,8 +23,8 @@ class App extends Component {
         <div id="main_content">
           <Loading />
           <SearchBar />
-          <UnitDetail />
           <UnitList />
+          <UnitDetail />
 
         </div>
       </div>

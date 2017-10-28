@@ -45,8 +45,7 @@ class SearchBar extends Component{
           id="my-textfield"
           className="mdc-textfield__input"
           value={this.state.term}
-          onChange={this.onInputChange}/>
-          <label className="mdc-textfield__label" htmlFor="my-textfield">Search a Unit</label>
+          onChange={this.onInputChange} />
           <div className="mdc-textfield__bottom-line"></div>
         </div>
 
