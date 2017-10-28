@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { selectUnit } from '../actions/index'
+import { bindActionCreators } from 'redux';
 
 import UnitListItem from '../components/unit_list_item'
+
 class UnitList extends Component {
   constructor(props){
     super(props)
     this.renderUnits.bind(this)
-    this.renderUnit.bind(this)
+
   }
-
-  renderUnit(unitData){
-    return(
-      <UnitListItem
-      unitCode={unitData.unitCode}
-      unitName={unitData.unitName}
-      key={unitData.id}/>
-    )
-  }
-
-
   renderUnits(unitlist){
 
     if (unitlist.length){
@@ -35,7 +27,26 @@ class UnitList extends Component {
       }
       return(
         <div>
-          {unitlist.map(this.renderUnit)}
+          {unitlist.map(
+
+            unitData => {
+              console.log(unitData)
+              return(
+                <li
+                key={unitData.id}
+                className="mdc-list-item"
+                id="unit_list_item" onClick = {() => this.props.selectUnit(unitData)}>
+                  <span className="mdc-list-item__text">
+                    {unitData.unitCode}
+                    <span className="mdc-list-item__text__secondary">
+                      {unitData.unitName}
+                    </span>
+                  </span>
+                </li>
+              )
+            }
+
+          )}
         </div>
       )
     }
@@ -51,7 +62,7 @@ class UnitList extends Component {
 
   render(){
     return (
-      <ul className="mdc-list my-bordered-list"id="unit_list">
+      <ul className="mdc-list my-bordered-list" id="unit_list">
         {console.log(this.props.units)}
         {this.renderUnits(this.props.units.searched_units)}
       </ul>
@@ -64,4 +75,8 @@ function mapStateToProps( { units }){
   return { units };
 }
 
-export default connect(mapStateToProps)(UnitList)
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({selectUnit:selectUnit}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UnitList)

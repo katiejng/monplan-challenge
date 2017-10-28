@@ -1,5 +1,4 @@
 import React from 'react';
-//TODO: Ensure list isn't too long. Allow for scrolling??
 const UnitListItem = (props) => {
   return (
     <li className="mdc-list-item" id="unit_list_item">
