@@ -30,3 +30,4 @@ After selecting a unit that they are interested in, they can view more informati
  3. Start filling up list items
  4. Be able to select a unit
  5. Set up redux router.
+ 6. Show loading screen when downloading all units

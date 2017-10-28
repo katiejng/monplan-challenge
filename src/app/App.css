@@ -29,6 +29,7 @@
 
 #toolbar{
   background-color: #006cab;
+  padding: 0em 20px;
 }
 
 #search_bar{
@@ -64,6 +65,12 @@
 
 #main_content{
   margin: 0px 20px;
+}
+
+#loading{
+  margin: 20px;
+  font-size: large;
+  font-weight: bold;
 }
 
 .my-bordered-list {
