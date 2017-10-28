@@ -27,13 +27,35 @@
   to { transform: rotate(360deg); }
 }
 
-#my_toolbar{
+#toolbar{
   background-color: #006cab;
 }
 
-#my_search_bar{
-  width: 400px;
+#search_bar{
+  min-width: 300px;
+  width: 60%;
   margin: 20px;
+}
+
+#unit_list{
+  margin: 20px 0px;
+  width: 90%;
+  min-width: 20em;
+  max-width: 30em;
+  display: inline-block;
+}
+
+#unit_detail{
+  margin: 20px;
+  width: 90%;
+  min-width: 20em;
+  max-width: 40em;
+  display: inline-block;
+  vertical-align: top
+}
+
+#main_content{
+  margin: 0px 20px;
 }
 
 .my-bordered-list {
@@ -51,7 +73,3 @@
   .my-bordered-list .mdc-list-item:not(:first-child) {
     border-top: none;
   }
-
-#unit_detail{
-  margin: 20px;
-}

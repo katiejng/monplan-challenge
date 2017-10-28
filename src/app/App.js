@@ -20,11 +20,11 @@ class App extends Component {
           <img src={logo} className='App-logo' alt='logo' />
           <Toolbar />
         </header>
-        <body>
+        <div id="main_content">
           <SearchBar />
           <UnitList />
           <UnitDetail />
-        </body>
+        </div>
       </div>
     )
   }
