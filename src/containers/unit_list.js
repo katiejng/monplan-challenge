@@ -18,7 +18,7 @@ class UnitList extends Component {
         return (
           <div>
           <UnitListItem
-            unitCode="Please search for a unit code."
+            unitCode="Please search for a unit code in the search bar above."
             unitName="For example, FIT1040"
             key="initialised"/>
           </div>
@@ -53,7 +53,7 @@ class UnitList extends Component {
     return (
       <div>
       <UnitListItem
-        unitCode="Sorry. I could not find anything that matched your query."
+        unitCode="Sorry. Could not find anything that matched your query."
         unitName="Please try again."
         key="no_results"/>
       </div>

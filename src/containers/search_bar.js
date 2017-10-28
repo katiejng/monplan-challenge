@@ -41,6 +41,7 @@ class SearchBar extends Component{
 
         <div className="mdc-textfield" id="search_bar">
           <input
+          placeholder="Search for a unit code or unit name"
           type="text"
           id="my-textfield"
           className="mdc-textfield__input"
