@@ -22,7 +22,7 @@ class UnitList extends Component {
   renderUnits(unitlist){
 
     if (unitlist.length){
-      if (unitlist[0]==-1){
+      if (unitlist[0]===-1){
         return (
           <div>
           <UnitListItem

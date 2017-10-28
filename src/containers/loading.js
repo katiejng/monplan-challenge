@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 class Loading extends Component {
-  constructor(props){
-    super(props)
-  }
-
   render(){
     if (this.props.units.isLoading==null || this.props.units.isLoading){
       return(
