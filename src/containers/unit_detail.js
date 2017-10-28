@@ -7,7 +7,7 @@ class  UnitDetail extends Component{
   renderLocationAndTime(lat){
     var time = <div />
     if (lat.time){
-      var time = lat.time.map((time)=>
+      time = lat.time.map((time)=>
         <div key={time}>
           {time}
         </div>
