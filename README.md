@@ -25,9 +25,10 @@ After selecting a unit that they are interested in, they can view more informati
 
 
 # TODO
- 1. Set up API calls
- 2. Figure out how to search
- 3. Start filling up list items
- 4. Be able to select a unit
+ 1. Show more search results without filling up the entire screen
+ 2. Get detailed information on units
  5. Set up redux router.
  6. Show loading screen when downloading all units
+ 7. Code linting
+ 8. Git commit guide
+ 9. propTypes
