@@ -1,6 +1,6 @@
 import { GET_UNITS, SEARCH_UNITS } from '../actions/index'
 
-export default function(state={units: [], searched_units: [], isLoading: true}, action){
+export default function(state={units: [], searched_units: [-1], isLoading: true}, action){
   switch (action.type){
     case GET_UNITS:
       return {units: action.payload, searched_units: state.searched_units, isLoading: false};
