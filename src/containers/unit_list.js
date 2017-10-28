@@ -11,22 +11,19 @@ class UnitList extends Component {
 
   renderUnit(unitData){
     return(
-      <UnitListItem unitData={unitData} />
+      <UnitListItem unitData={unitData} key={unitData.id}/>
     )
   }
 
 
   renderUnits(unitlist){
-    var maxLen=5
-    if (unitlist.units){
-      if (unitlist.units.data){
-        maxLen = (unitlist.units.data.length < maxLen) ? unitlist.units.data.length : maxLen;
-        return(
-          <div>
-            {unitlist.units.data.splice(0,maxLen).map(this.renderUnit)}
-          </div>
-        )
-      }
+
+    if (unitlist){
+      return(
+        <div>
+          {unitlist.map(this.renderUnit)}
+        </div>
+      )
     }
     return
   }
@@ -34,7 +31,7 @@ class UnitList extends Component {
   render(){
     return (
       <ul className="mdc-list my-bordered-list"id="unit_list">
-        {this.renderUnits(this.props.units)}
+        {this.renderUnits(this.props.units.searched_units)}
       </ul>
 
     );

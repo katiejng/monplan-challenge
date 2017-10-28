@@ -14,20 +14,23 @@ class SearchBar extends Component{
 
   componentDidMount(){
     this.props.getUnits()
-    console.log(this.props);
+
   }
 
   onInputChange(event) {
+    //TODO: Animate the input box
     this.setState({term:event.target.value});
   }
 
   onFormSubmit(event){
     // prevent page from refreshing
     event.preventDefault();
-    console.log(this.state.term);
+
     //search for the unit in units
-    this.props.searchUnits(this.state.term);
-    this.setState({term: this.state.term})
+    if (this.state.term.length>0){
+      //TODO: Show an error
+      this.props.searchUnits(this.state.term);
+    }
   }
 
   render(){

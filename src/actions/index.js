@@ -14,7 +14,7 @@ export function searchUnits(term){
 
 export function getUnits(){
   const request = axios.get(GET_UNITS_URL);
-  console.log("The request is "+request);
+  
   return {
     type: GET_UNITS,
     payload: request
