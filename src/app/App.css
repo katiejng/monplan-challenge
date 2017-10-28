@@ -60,8 +60,16 @@
   width: inherit;
   overflow: scroll;
   padding: 10px 15px;
-
 }
+
+#unit_list_item:hover{
+  background-color: AliceBlue;
+}
+
+#unit_list_item:active{
+  background-color: Lavender;
+}
+
 #unit_detail_body{
   text-align: left;
 }
