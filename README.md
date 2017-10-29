@@ -3,13 +3,10 @@
 # Dependencies (Installation)
 1. Node.js (https://nodejs.org) (we suggest you use NVM (https://github.com/creationix/nvm) to use our preferred Node.js version)
 2. Yarn (https://yarnpkg.com/en/docs/install)
-
-Things I used:
-3. Material Components for Web (https://material.io/components/web/)
-4. redux-promise
-5. axios
-6. react-redux
-7. redux
+3. react-redux (https://www.npmjs.com/package/react-redux)
+4. redux-promise (https://www.npmjs.com/package/react-promise)
+5. axios (https://www.npmjs.com/package/axios)
+6. redux (https://www.npmjs.com/package/redux)
 
 
 # Instructions before starting the challenge
