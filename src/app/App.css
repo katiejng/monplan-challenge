@@ -57,7 +57,6 @@
 #unit_list_item{
   text-align: left;
   width: inherit;
-  overflow: scroll;
   padding: 10px 15px;
 }
 
