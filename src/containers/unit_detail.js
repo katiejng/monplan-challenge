@@ -15,11 +15,18 @@ class  UnitDetail extends Component{
 
     return(
             <div key={lat.location}>
-              {lat.location}
+              <div id="location_header">{lat.location}</div>
               {time}
             </div>
           )
         }
+
+  renderStringOrNone(string){
+    if (string){
+      return <div>{string}</div>
+    }
+    return <div>None</div>
+  }
 
 
   render(){
@@ -47,24 +54,25 @@ class  UnitDetail extends Component{
           </section>
 
           <section className="mdc-card__supporting-text">
-            Faculty: <br />
+            <div id="unit_detail_header">Faculty: </div>
             {currentUnit.faculty}
           </section>
 
           <section className="mdc-card__supporting-text">
-            Prerequisites: <br />
-            {currentUnit.preqs} <br />
-            Prohibitions: <br />
-            {currentUnit.proh}
+            <div id="unit_detail_header">Prerequisites: </div>
+            {this.renderStringOrNone(currentUnit.preqs)} <br />
+            <div id="unit_detail_header">Prohibitions: </div>
+            {this.renderStringOrNone(currentUnit.proh)}
           </section>
 
           <section className="mdc-card__supporting-text">
-          Offered at: <br />
+          <div id="unit_detail_header">Offered at: </div>
             {currentUnit.locationAndTime.map(this.renderLocationAndTime)
             }
           </section>
           <section className="mdc-card__supporting-text">
-            Credit Points: {currentUnit.creditPoints}
+            <div id = "unit_detail_header">Credit Points: </div>
+            {currentUnit.creditPoints}
           </section>
 
           </div>
