@@ -27,8 +27,10 @@ class App extends Component {
           </header>
           <div id='main_content'>
             <SearchBar />
-            <UnitList />
-            <UnitDetail />
+            <div id="unit_results">
+              <UnitList/>
+              <UnitDetail />
+            </div>
 
           </div>
         </div>

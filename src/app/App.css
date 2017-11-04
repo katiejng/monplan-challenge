@@ -32,24 +32,43 @@
 }
 
 #input_field{
-  min-width: 300px;
+  min-width: 15em;
+  width: 90%;
   margin: auto;
-  width: 70%;
+  display: flex;
+  flexDirection: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#search_bar{
+  min-width: 15em;
+  text-align: left;
+  flex:1;
+}
+
+#unit_results{
+  margin: auto;
+  display: flex;
+  flexDirection: row;
+  flex-wrap:wrap;
+}
+
+#search_button{
+  margin: 20px;
 }
 
 #unit_list{
-  margin: 20px 0px;
-  width: 90%;
-  min-width: 20em;
-  max-width: 30em;
+  margin: .5em 1em;
+  min-width: 15em;
   display: inline-block;
+  flex:1
 }
 
 #unit_detail{
-  margin: 1.7em 10px;
-  width: 90%;
-  min-width: 20em;
-  max-width: 30em;
+  margin: 1em;
+  min-width: 15em;
+  flex:1;
   display: inline-block;
   vertical-align: top;
 }
@@ -73,7 +92,8 @@
 }
 
 #main_content{
-  margin: 0px 20px;
+width: 95%;
+margin: auto;
 }
 
 #loading{

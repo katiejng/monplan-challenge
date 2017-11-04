@@ -45,12 +45,13 @@ class SearchBar extends Component{
       )
     }
     const data = this.props.units.units.data.map((unit)=> `${unit.unitCode} ${unit.unitName}`)
-
+    var style = {display: 'flex', flexDirection: 'row'}
+    var style2 = {flex:1}
     return (
 
 
       <div id="input_field">
-
+          <div id="search_bar">
           <AutoComplete
           floatingLabelText="Search for a unit code or unit name"
           type="text"
@@ -62,6 +63,7 @@ class SearchBar extends Component{
           filter={AutoComplete.caseInsensitiveFilter}
           maxSearchResults={5}
           {...termError} />
+          </div>
 
         <button onClick={this.onFormSubmit} type="submit" id="search_button" className="mdc-button mdc-button--raised mdc-button--compact" >
           <i className="material-icons mdc-button__icon">search</i>
