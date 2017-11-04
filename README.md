@@ -9,7 +9,11 @@
 6. redux (https://www.npmjs.com/package/redux)
 
 
-# Instructions before starting the challenge
+# Instructions to view the website
+Option 1
+1. visit https://monplan-project.firebaseapp.com
+
+Option 2
 1. Install required [Dependencies](#dependencies-installation)
 2. Fork and clone this repository
 3. `cd` into repository
