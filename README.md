@@ -8,6 +8,8 @@
 5. axios (https://www.npmjs.com/package/axios)
 6. redux (https://www.npmjs.com/package/redux)
 7. prop-types (https://www.npmjs.com/package/prop-types)
+8. material-ui (https://www.npmjs.com/package/material-ui)
+9. react-tap-event-plugin (https://www.npmjs.com/package/react-tap-event-plugin)
 
 # Instructions to view the website
 Option 1
