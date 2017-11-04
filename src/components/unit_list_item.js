@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 const UnitListItem = (props) => {
   return (
     <li className='mdc-list-item' id='unit_list_item'>
@@ -10,6 +12,11 @@ const UnitListItem = (props) => {
       </span>
     </li>
   )
+}
+
+UnitListItem.propTypes = {
+  unitCode: PropTypes.string,
+  unitName: PropTypes.string,
 }
 
 export default UnitListItem

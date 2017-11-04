@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 // TODO: Location and Times
 class UnitDetail extends Component {
@@ -78,6 +79,11 @@ class UnitDetail extends Component {
       </div>
     )
   };
+}
+
+
+UnitDetail.propTypes = {
+  unit: PropTypes.object
 }
 
 function mapStateToProps (state) {

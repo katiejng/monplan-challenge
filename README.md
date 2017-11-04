@@ -7,7 +7,7 @@
 4. redux-promise (https://www.npmjs.com/package/react-promise)
 5. axios (https://www.npmjs.com/package/axios)
 6. redux (https://www.npmjs.com/package/redux)
-
+7. prop-types (https://www.npmjs.com/package/prop-types)
 
 # Instructions to view the website
 Option 1
@@ -30,4 +30,3 @@ After selecting a unit that they are interested in, they can view more informati
  2. Show error when user searches ""
  5. Set up redux router.
  6. Show loading screen when downloading all units
- 9. propTypes

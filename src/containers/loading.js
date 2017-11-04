@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import { bindActionCreators } from 'redux'
 import { getUnits } from '../actions/index'
@@ -28,6 +29,11 @@ function mapStateToProps ({ units }) {
 
 function mapDispatchToProps (dispatch) {
   return bindActionCreators({ getUnits }, dispatch)
+}
+
+Loading.propTypes = {
+  units: PropTypes.object,
+  getUnits: PropTypes.func
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Loading)

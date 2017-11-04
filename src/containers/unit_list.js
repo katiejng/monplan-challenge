@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { selectUnit } from '../actions/index'
 import { bindActionCreators } from 'redux'
+import PropTypes from 'prop-types'
 
 import UnitListItem from '../components/unit_list_item'
 
@@ -66,6 +67,11 @@ class UnitList extends Component {
 
     )
   }
+}
+
+UnitList.propTypes = {
+  units: PropTypes.object,
+  selectUnit: PropTypes.func
 }
 
 function mapStateToProps ({ units }) {
