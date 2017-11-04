@@ -31,5 +31,4 @@ After selecting a unit that they are interested in, they can view more informati
  5. Set up redux router.
  6. Show loading screen when downloading all units
  7. Code linting
- 8. Git commit guide
  9. propTypes
