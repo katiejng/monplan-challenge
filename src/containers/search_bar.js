@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { searchUnits } from '../actions/index';
+import { searchUnits , getUnits } from '../actions/index';
 import PropTypes from 'prop-types'
+import TextField from 'material-ui/TextField'
+import CircularProgress from 'material-ui/CircularProgress';
+
 
 class SearchBar extends Component{
+  componentDidMount () {
+    this.props.getUnits()
+  }
+
   constructor(props){
     super(props);
     this.state = { term: '' };
@@ -29,24 +36,33 @@ class SearchBar extends Component{
   }
 
   render(){
+
+
+    if (this.props.units.isLoading){
+      return (
+        <div>
+          <CircularProgress id="loading"/>
+        </div>
+      )
+    }
+
     return (
 
 
       <form onSubmit={this.onFormSubmit} className="input-field">
 
         <div className="mdc-textfield" id="search_bar">
-          <input
-          placeholder="Search for a unit code or unit name"
+          <TextField
+          floatingLabelText="Search for a unit code or unit name"
           type="text"
           id="my-textfield"
-          className="mdc-textfield__input"
           value={this.state.term}
-          onChange={this.onInputChange} />
-          <div className="mdc-textfield__bottom-line"></div>
+          onChange={this.onInputChange}
+          fullWidth />
         </div>
 
 
-        <button type="submit" className="mdc-button mdc-button--raised mdc-button--compact">
+        <button type="submit" className="mdc-button mdc-button--raised mdc-button--compact" >
           <i className="material-icons mdc-button__icon">search</i>
           Search
         </button>
@@ -56,11 +72,17 @@ class SearchBar extends Component{
 }
 
 SearchBar.propTypes = {
-  searchUnits: PropTypes.func
+  searchUnits: PropTypes.func,
+  getUnits: PropTypes.func,
+  units: PropTypes.object
+}
+
+function mapStateToProps ({ units }) {
+  return { units }
 }
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({ searchUnits }, dispatch);
+  return bindActionCreators({ getUnits, searchUnits }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
