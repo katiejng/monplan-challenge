@@ -17,7 +17,7 @@ class UnitList extends Component {
         return (
           <div>
             <UnitListItem
-              unitCode='Please search for a unit code in the search bar above.'
+              unitCode='Please search for a unit code above.'
               unitName='For example, FIT1040'
               key='initialised' />
           </div>
