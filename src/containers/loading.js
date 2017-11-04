@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
+import { bindActionCreators } from 'redux';
+import { getUnits } from '../actions/index';
+
 class Loading extends Component {
+
+  componentDidMount(){
+    this.props.getUnits()
+
+  }
+
   render(){
     if (this.props.units.isLoading==null || this.props.units.isLoading){
       return(
@@ -19,4 +28,9 @@ function mapStateToProps( { units }){
   return { units };
 }
 
-export default connect(mapStateToProps)(Loading)
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({ getUnits }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Loading)

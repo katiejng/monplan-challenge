@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getUnits, searchUnits } from '../actions/index';
+import { searchUnits } from '../actions/index';
 
 class SearchBar extends Component{
   constructor(props){
@@ -12,10 +12,7 @@ class SearchBar extends Component{
     this.onFormSubmit=this.onFormSubmit.bind(this);
   }
 
-  componentDidMount(){
-    this.props.getUnits()
 
-  }
 
   onInputChange(event) {
     //TODO: Animate the input box
@@ -61,7 +58,7 @@ class SearchBar extends Component{
 }
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({ getUnits, searchUnits }, dispatch);
+  return bindActionCreators({ searchUnits }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(SearchBar);
