@@ -8,11 +8,10 @@ export default function (state = {units: [], searched_units: [-1], isLoading: tr
       if (state.units && state.units.data) {
         const term = action.payload.toLowerCase()
         var results = []
-        var maxLen = 10
+        var maxLen = 8
 
         for (var i = 0; i < state.units.data.length; i++) {
-          if (state.units.data[i].unitCode.toLowerCase().indexOf(term) !== -1 ||
-              state.units.data[i].unitName.toLowerCase().indexOf(term) !== -1
+          if (`${state.units.data[i].unitCode} ${state.units.data[i].unitName}`.toLowerCase().indexOf(term) !== -1
            ) {
             results.push(state.units.data[i])
           }

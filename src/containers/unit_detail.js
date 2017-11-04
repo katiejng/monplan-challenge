@@ -33,12 +33,11 @@ class UnitDetail extends Component {
     if (!this.props.unit) {
       return (<div className='mdc-card' id='unit_detail'>
         <section className='mdc-card__primary'>
-          <h1 className='mdc-card__title mdc-card__title'>Select a unit to see information about the unit</h1>
+          <h1 className='mdc-card__title mdc-card__title'>Select a unit to see more information</h1>
         </section>
       </div>
       )
     }
-    console.log(this.props.unit.data)
     const currentUnit = this.props.unit.data
     return (
       <div className='mdc-card' id='unit_detail'>

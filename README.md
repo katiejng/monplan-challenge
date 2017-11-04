@@ -28,7 +28,4 @@ After selecting a unit that they are interested in, they can view more informati
 
 
 # TODO
- 1. Show more search results without filling up the entire screen
- 2. Show error when user searches ""
  5. Set up redux router.
- 6. Show loading screen when downloading all units

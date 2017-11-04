@@ -31,10 +31,10 @@
   background-color: #006cab;
 }
 
-#input_field{
+#search_bar{
   min-width: 300px;
-  margin: auto;
-  width: 70%;
+  width: 60%;
+  margin: 20px;
 }
 
 #unit_list{

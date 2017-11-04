@@ -4,9 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { searchUnits , getUnits } from '../actions/index';
 import PropTypes from 'prop-types'
-import TextField from 'material-ui/TextField'
 import CircularProgress from 'material-ui/CircularProgress';
-
+import AutoComplete from "material-ui/AutoComplete";
 
 class SearchBar extends Component{
   componentDidMount () {
@@ -20,24 +19,24 @@ class SearchBar extends Component{
     this.onFormSubmit=this.onFormSubmit.bind(this);
   }
 
-  onInputChange(event) {
+  onInputChange(searchText, dataSource, params) {
     //TODO: Animate the input box
-    this.setState({term:event.target.value});
+    this.setState({term:searchText, termError:""});
   }
 
   onFormSubmit(event){
-    // prevent page from refreshing
-    event.preventDefault();
+    this.setState({termError:""})
     //search for the unit in units
     if (this.state.term.length>0){
       //TODO: Show an error
       this.props.searchUnits(this.state.term);
+    }else{
+      this.setState({termError: "Please enter some text"})
     }
   }
 
   render(){
-
-
+    const termError = this.state.termError ? { errorText: "Please enter some text" } : {}
     if (this.props.units.isLoading){
       return (
         <div>
@@ -45,28 +44,31 @@ class SearchBar extends Component{
         </div>
       )
     }
+    const data = this.props.units.units.data.map((unit)=> `${unit.unitCode} ${unit.unitName}`)
 
     return (
 
 
-      <form onSubmit={this.onFormSubmit} className="input-field">
+      <div id="input_field">
 
-        <div className="mdc-textfield" id="search_bar">
-          <TextField
+          <AutoComplete
           floatingLabelText="Search for a unit code or unit name"
           type="text"
-          id="my-textfield"
           value={this.state.term}
-          onChange={this.onInputChange}
-          fullWidth />
-        </div>
+          fullWidth
+          onNewRequest={this.onFormSubmit}
+          onUpdateInput={this.onInputChange}
+          dataSource={data}
+          filter={AutoComplete.caseInsensitiveFilter}
+          maxSearchResults={5}
+          {...termError} />
 
-
-        <button type="submit" className="mdc-button mdc-button--raised mdc-button--compact" >
+        <button onClick={this.onFormSubmit} type="submit" id="search_button" className="mdc-button mdc-button--raised mdc-button--compact" >
           <i className="material-icons mdc-button__icon">search</i>
           Search
         </button>
-      </form>
+
+      </div>
     )
   }
 }
