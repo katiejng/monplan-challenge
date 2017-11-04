@@ -12,8 +12,6 @@ class SearchBar extends Component{
     this.onFormSubmit=this.onFormSubmit.bind(this);
   }
 
-
-
   onInputChange(event) {
     //TODO: Animate the input box
     this.setState({term:event.target.value});
@@ -22,7 +20,6 @@ class SearchBar extends Component{
   onFormSubmit(event){
     // prevent page from refreshing
     event.preventDefault();
-    console.log(this.state.term)
     //search for the unit in units
     if (this.state.term.length>0){
       //TODO: Show an error

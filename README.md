@@ -30,5 +30,4 @@ After selecting a unit that they are interested in, they can view more informati
  2. Show error when user searches ""
  5. Set up redux router.
  6. Show loading screen when downloading all units
- 7. Code linting
  9. propTypes

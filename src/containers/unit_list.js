@@ -1,44 +1,41 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { selectUnit } from '../actions/index'
-import { bindActionCreators } from 'redux';
+import { bindActionCreators } from 'redux'
 
 import UnitListItem from '../components/unit_list_item'
 
 class UnitList extends Component {
-  constructor(props){
+  constructor (props) {
     super(props)
     this.renderUnits.bind(this)
-
   }
-  renderUnits(unitlist){
-
-    if (unitlist.length){
-      if (unitlist[0]===-1){
+  renderUnits (unitlist) {
+    if (unitlist.length) {
+      if (unitlist[0] === -1) {
         return (
           <div>
-          <UnitListItem
-            unitCode="Please search for a unit code in the search bar above."
-            unitName="For example, FIT1040"
-            key="initialised"/>
+            <UnitListItem
+              unitCode='Please search for a unit code in the search bar above.'
+              unitName='For example, FIT1040'
+              key='initialised' />
           </div>
         )
-
       }
-      return(
+      return (
         <div>
           {unitlist.map(
 
             unitData => {
               console.log(unitData)
-              return(
+              return (
                 <li
-                key={unitData.id}
-                className="mdc-list-item"
-                id="unit_list_item" onClick = {() => this.props.selectUnit(unitData)}>
-                  <span className="mdc-list-item__text">
+                  key={unitData.id}
+                  className='mdc-list-item'
+                  id='unit_list_item' onClick={() => this.props.selectUnit(unitData)}>
+                  <span className='mdc-list-item__text'>
                     {unitData.unitCode}
-                    <span className="mdc-list-item__text__secondary">
+                    <span className='mdc-list-item__text__secondary'>
                       {unitData.unitName}
                     </span>
                   </span>
@@ -52,31 +49,31 @@ class UnitList extends Component {
     }
     return (
       <div>
-      <UnitListItem
-        unitCode="Sorry. Could not find anything that matched your query."
-        unitName="Please try again."
-        key="no_results"/>
+        <UnitListItem
+          unitCode='Sorry. Could not find anything that matched your query.'
+          unitName='Please try again.'
+          key='no_results' />
       </div>
     )
   }
 
-  render(){
+  render () {
     return (
-      <ul className="mdc-list my-bordered-list" id="unit_list">
+      <ul className='mdc-list my-bordered-list' id='unit_list'>
         {console.log(this.props.units)}
         {this.renderUnits(this.props.units.searched_units)}
       </ul>
 
-    );
+    )
   }
 }
 
-function mapStateToProps( { units }){
-  return { units };
+function mapStateToProps ({ units }) {
+  return { units }
 }
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({selectUnit:selectUnit}, dispatch)
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators({selectUnit: selectUnit}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(UnitList)

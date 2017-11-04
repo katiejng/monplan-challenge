@@ -10,17 +10,17 @@ class App extends Component {
   render () {
     return (
       <div className='App'>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
         <link
-          rel="stylesheet"
-          href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+          rel='stylesheet'
+          href='https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css' />
 
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
           <Toolbar />
         </header>
-        <div id="main_content">
+        <div id='main_content'>
           <Loading />
           <SearchBar />
           <UnitList />
