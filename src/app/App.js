@@ -5,16 +5,14 @@ import Toolbar from '../components/tool_bar'
 import SearchBar from '../containers/search_bar'
 import UnitList from '../containers/unit_list'
 import UnitDetail from '../containers/unit_detail'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 const muiTheme = getMuiTheme({
   palette: {
-   primary1Color: '#006cab',
-  },
-});
-
+    primary1Color: '#006cab'
+  }
+})
 
 class App extends Component {
   render () {
@@ -27,8 +25,8 @@ class App extends Component {
           </header>
           <div id='main_content'>
             <SearchBar />
-            <div id="unit_results">
-              <UnitList/>
+            <div id='unit_results'>
+              <UnitList />
               <UnitDetail />
             </div>
 

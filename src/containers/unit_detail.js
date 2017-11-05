@@ -80,7 +80,6 @@ class UnitDetail extends Component {
   };
 }
 
-
 UnitDetail.propTypes = {
   unit: PropTypes.object
 }

@@ -16,7 +16,7 @@ const UnitListItem = (props) => {
 
 UnitListItem.propTypes = {
   unitCode: PropTypes.string,
-  unitName: PropTypes.string,
+  unitName: PropTypes.string
 }
 
 export default UnitListItem
