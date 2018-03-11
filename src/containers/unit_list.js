@@ -24,7 +24,11 @@ class UnitList extends Component {
         )
       }
       return (
-        <div>
+        <div
+          style={{
+            flex: 1,
+          }}
+        >
           {unitlist.map(
 
             unitData => {

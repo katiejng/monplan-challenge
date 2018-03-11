@@ -5,7 +5,7 @@ const UnitListItem = (props) => {
   return (
     <li className='mdc-list-item' id='unit_list_item'>
       <span className='mdc-list-item__text'>
-        {props.unitCode}
+        {props.unitCode}&nbsp;
         <span className='mdc-list-item__text__secondary'>
           {props.unitName}
         </span>

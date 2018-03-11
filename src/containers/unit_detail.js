@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import {Card, CardHeader, CardText, CardTitle} from "material-ui";
 
 // TODO: Location and Times
 class UnitDetail extends Component {
@@ -33,7 +34,7 @@ class UnitDetail extends Component {
     if (!this.props.unit) {
       return (<div className='mdc-card' id='unit_detail'>
         <section className='mdc-card__primary'>
-          <h1 className='mdc-card__title mdc-card__title'>Select a unit to see more information</h1>
+          <h3 className='mdc-card__title mdc-card__title'>Select a unit to see more information</h3>
         </section>
       </div>
       )
@@ -42,35 +43,36 @@ class UnitDetail extends Component {
     const {unit: { data: {unitCode, unitName, preqs, proh,  faculty , creditPoints }}} = this.props
     console.log(currentUnit)
     return (
-      <div className='mdc-card' id='unit_detail'>
-        <section className='mdc-card__primary'>
-          <h1 className='mdc-card__title mdc-card__title--large'>{unitCode}</h1>
-          <h2 className='mdc-card__subtitle'>{unitName}</h2>
+      <Card style={{
+        textAlign: 'left',
+          flex: 1,
+      }}
+      >
+          <CardTitle
+            title ={unitCode}
+            subtitle={unitName}
+            />
 
-        </section>
-        <div id='unit_detail_body'>
-
-
-          <section className='mdc-card__supporting-text'>
-            <div id='unit_detail_header'>Faculty: </div>
+          <CardText>
+            <div>Faculty: </div>
             {faculty}
-          </section>
+          </CardText>
 
-          <section className='mdc-card__supporting-text'>
-            <div id='unit_detail_header'>Prerequisites: </div>
+          <CardText>
+            <div>Prerequisites: </div>
             {this.renderStringOrNone(currentUnit.preqs)} <br />
-            <div id='unit_detail_header'>Prohibitions: </div>
+            <div>Prohibitions: </div>
             {this.renderStringOrNone(currentUnit.proh)}
-          </section>
+          </CardText>
 
 
-          <section className='mdc-card__supporting-text'>
-            <div id='unit_detail_header'>Credit Points: </div>
+          <CardText>
+            <div>Credit Points: </div>
             {currentUnit.creditPoints}
-          </section>
+          </CardText>
 
-        </div>
-      </div>
+
+      </Card>
     )
   };
 }
