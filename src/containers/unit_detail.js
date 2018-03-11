@@ -39,22 +39,21 @@ class UnitDetail extends Component {
       )
     }
     const currentUnit = this.props.unit.data
+    const {unit: { data: {unitCode, unitName, preqs, proh,  faculty , creditPoints }}} = this.props
+    console.log(currentUnit)
     return (
       <div className='mdc-card' id='unit_detail'>
         <section className='mdc-card__primary'>
-          <h1 className='mdc-card__title mdc-card__title--large'>{currentUnit.unitCode}</h1>
-          <h2 className='mdc-card__subtitle'>{currentUnit.unitName}</h2>
+          <h1 className='mdc-card__title mdc-card__title--large'>{unitCode}</h1>
+          <h2 className='mdc-card__subtitle'>{unitName}</h2>
 
         </section>
         <div id='unit_detail_body'>
 
-          <section className='mdc-card__supporting-text'>
-            <h3 className='mdc-card__subtitle'>{currentUnit.description}</h3>
-          </section>
 
           <section className='mdc-card__supporting-text'>
             <div id='unit_detail_header'>Faculty: </div>
-            {currentUnit.faculty}
+            {faculty}
           </section>
 
           <section className='mdc-card__supporting-text'>
@@ -64,11 +63,7 @@ class UnitDetail extends Component {
             {this.renderStringOrNone(currentUnit.proh)}
           </section>
 
-          <section className='mdc-card__supporting-text'>
-            <div id='unit_detail_header'>Offered at: </div>
-            {currentUnit.locationAndTime.map(this.renderLocationAndTime)
-            }
-          </section>
+
           <section className='mdc-card__supporting-text'>
             <div id='unit_detail_header'>Credit Points: </div>
             {currentUnit.creditPoints}

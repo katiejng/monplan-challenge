@@ -34,7 +34,7 @@ class UnitList extends Component {
                   className='mdc-list-item'
                   id='unit_list_item' onClick={() => this.props.selectUnit(unitData)}>
                   <span className='mdc-list-item__text'>
-                    {unitData.unitCode}
+                    {unitData.unitCode}&nbsp;
                     <span className='mdc-list-item__text__secondary'>
                       {unitData.unitName}
                     </span>
